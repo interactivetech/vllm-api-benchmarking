@@ -1,3 +1,27 @@
+# 04.10.25 Benchmarking API running
+
+## Pre-Req
+
+* `pip install vllm transformers torch tqdm aiohttp datasets`
+* 
+## Running Serving Benchmark
+
+* `cd vllm/benchmark/`
+* `wget https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/resolve/main/ShareGPT_V3_unfiltered_cleaned_split.json`
+* `export HUGGING_FACE_HUB_TOKEN=<CHANGE_ME>`
+* `export API_KEY=<CHANGE_ME>`
+* `export API_URL=<CHANGE_ME>`
+* `./run_benchmark_serving_api.sh`
+
+## Running Throughput Benchmark
+
+* `cd vllm/benchmark/`
+* `wget https://huggingface.co/datasets/anon8231489123/ShareGPT_Vicuna_unfiltered/resolve/main/ShareGPT_V3_unfiltered_cleaned_split.json`
+* `export HUGGING_FACE_HUB_TOKEN=<CHANGE_ME>`
+* `export API_KEY=<CHANGE_ME>`
+* `export API_URL=<CHANGE_ME>`
+* `./run_benchmark_throughput_api.sh`
+
 # Benchmarking vLLM
 
 This README guides you through running benchmark tests with the extensive
